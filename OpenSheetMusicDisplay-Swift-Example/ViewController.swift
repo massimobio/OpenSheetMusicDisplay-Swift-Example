@@ -9,10 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private var containerView: UIView!
+    private var notationView: NotationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        notationView = NotationView(containerView: containerView)
+        
+        let action = UIAction(handler: { [self] _ in notationView?.reload() })
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .redo, primaryAction: action, menu: nil)
     }
+    
+    
 
 
 }

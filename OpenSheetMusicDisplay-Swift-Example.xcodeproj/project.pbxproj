@@ -13,6 +13,10 @@
 		56FBBCB325740BCA00074308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCB125740BCA00074308 /* Main.storyboard */; };
 		56FBBCB525740BCB00074308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCB425740BCB00074308 /* Assets.xcassets */; };
 		56FBBCB825740BCB00074308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCB625740BCB00074308 /* LaunchScreen.storyboard */; };
+		56FBBCCA2574105B00074308 /* NotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBBCC92574105B00074308 /* NotationView.swift */; };
+		56FBBCCD257414BD00074308 /* OSMD in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCC825740FCA00074308 /* OSMD */; };
+		56FBBCD025741BD400074308 /* Unlullaby.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCCF25741BD400074308 /* Unlullaby.musicxml */; };
+		56FBBCD425741E4100074308 /* one.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCD325741E4100074308 /* one.musicxml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		56FBBCB425740BCB00074308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56FBBCB725740BCB00074308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56FBBCB925740BCB00074308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56FBBCC825740FCA00074308 /* OSMD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OSMD; sourceTree = "<group>"; };
+		56FBBCC92574105B00074308 /* NotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotationView.swift; sourceTree = "<group>"; };
+		56FBBCCF25741BD400074308 /* Unlullaby.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Unlullaby.musicxml; sourceTree = "<group>"; };
+		56FBBCD325741E4100074308 /* one.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = one.musicxml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				56FBBCAB25740BCA00074308 /* AppDelegate.swift */,
 				56FBBCAD25740BCA00074308 /* SceneDelegate.swift */,
 				56FBBCAF25740BCA00074308 /* ViewController.swift */,
+				56FBBCC92574105B00074308 /* NotationView.swift */,
 				56FBBCB125740BCA00074308 /* Main.storyboard */,
 				56FBBCB425740BCB00074308 /* Assets.xcassets */,
+				56FBBCCF25741BD400074308 /* Unlullaby.musicxml */,
+				56FBBCD325741E4100074308 /* one.musicxml */,
 				56FBBCB625740BCB00074308 /* LaunchScreen.storyboard */,
 				56FBBCB925740BCB00074308 /* Info.plist */,
+				56FBBCC825740FCA00074308 /* OSMD */,
 			);
 			path = "OpenSheetMusicDisplay-Swift-Example";
 			sourceTree = "<group>";
@@ -126,7 +138,10 @@
 			files = (
 				56FBBCB825740BCB00074308 /* LaunchScreen.storyboard in Resources */,
 				56FBBCB525740BCB00074308 /* Assets.xcassets in Resources */,
+				56FBBCD425741E4100074308 /* one.musicxml in Resources */,
 				56FBBCB325740BCA00074308 /* Main.storyboard in Resources */,
+				56FBBCCD257414BD00074308 /* OSMD in Resources */,
+				56FBBCD025741BD400074308 /* Unlullaby.musicxml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FBBCCA2574105B00074308 /* NotationView.swift in Sources */,
 				56FBBCB025740BCA00074308 /* ViewController.swift in Sources */,
 				56FBBCAC25740BCA00074308 /* AppDelegate.swift in Sources */,
 				56FBBCAE25740BCA00074308 /* SceneDelegate.swift in Sources */,
