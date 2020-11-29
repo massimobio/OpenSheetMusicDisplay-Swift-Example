@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let cursorNextAction = UIAction(handler: { [self] _ in
             notationView?.cursorNext()
         })
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Next", image: nil, primaryAction: cursorNextAction, menu: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cursor", image: nil, primaryAction: cursorNextAction, menu: nil)
 
     }
     

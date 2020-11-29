@@ -22,7 +22,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
         configuration.ignoresViewportScaleLimits = true
         backgroundColor = UIColor.clear
         allowsBackForwardNavigationGestures = false
-        isUserInteractionEnabled = false
+        isUserInteractionEnabled = true
         
         if let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "OSMD") {
             let request = URLRequest(url: url)
@@ -52,6 +52,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
           osmd.setOptions({
             backend: "svg",
             drawTitle: true,
+            followCursor: true,
             // drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
           });
           osmd
