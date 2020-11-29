@@ -301,8 +301,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OpenSheetMusicDisplay-Swift-Example/OpenSheetMusicDisplay-Swift-Example.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GYKHTZHLF3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "OpenSheetMusicDisplay-Swift-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
@@ -324,8 +325,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OpenSheetMusicDisplay-Swift-Example/OpenSheetMusicDisplay-Swift-Example.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GYKHTZHLF3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "OpenSheetMusicDisplay-Swift-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
