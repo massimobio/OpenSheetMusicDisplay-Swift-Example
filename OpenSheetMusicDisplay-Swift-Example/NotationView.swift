@@ -40,7 +40,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Did finish navigation")
-        let xmlURL = URL(fileURLWithPath: Bundle.main.path(forResource: "Unlullaby", ofType: "musicxml")!)
+        let xmlURL = URL(fileURLWithPath: Bundle.main.path(forResource: "FaurReveSample", ofType: "musicxml")!)
         guard var xmlString = try? String(contentsOf: xmlURL) else {
             print("Couldn't read the MusicXML file")
             return

@@ -15,8 +15,7 @@
 		56FBBCB825740BCB00074308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCB625740BCB00074308 /* LaunchScreen.storyboard */; };
 		56FBBCCA2574105B00074308 /* NotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBBCC92574105B00074308 /* NotationView.swift */; };
 		56FBBCCD257414BD00074308 /* OSMD in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCC825740FCA00074308 /* OSMD */; };
-		56FBBCD025741BD400074308 /* Unlullaby.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCCF25741BD400074308 /* Unlullaby.musicxml */; };
-		56FBBCD425741E4100074308 /* one.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBCD325741E4100074308 /* one.musicxml */; };
+		56FBBD0E2574408B00074308 /* FaurReveSample.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 56FBBD0D2574408B00074308 /* FaurReveSample.musicxml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,7 @@
 		56FBBCB925740BCB00074308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56FBBCC825740FCA00074308 /* OSMD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OSMD; sourceTree = "<group>"; };
 		56FBBCC92574105B00074308 /* NotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotationView.swift; sourceTree = "<group>"; };
-		56FBBCCF25741BD400074308 /* Unlullaby.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Unlullaby.musicxml; sourceTree = "<group>"; };
-		56FBBCD325741E4100074308 /* one.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = one.musicxml; sourceTree = "<group>"; };
+		56FBBD0D2574408B00074308 /* FaurReveSample.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FaurReveSample.musicxml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +68,7 @@
 				56FBBCC92574105B00074308 /* NotationView.swift */,
 				56FBBCB125740BCA00074308 /* Main.storyboard */,
 				56FBBCB425740BCB00074308 /* Assets.xcassets */,
-				56FBBCCF25741BD400074308 /* Unlullaby.musicxml */,
-				56FBBCD325741E4100074308 /* one.musicxml */,
+				56FBBD0D2574408B00074308 /* FaurReveSample.musicxml */,
 				56FBBCB625740BCB00074308 /* LaunchScreen.storyboard */,
 				56FBBCB925740BCB00074308 /* Info.plist */,
 				56FBBCC825740FCA00074308 /* OSMD */,
@@ -138,10 +135,9 @@
 			files = (
 				56FBBCB825740BCB00074308 /* LaunchScreen.storyboard in Resources */,
 				56FBBCB525740BCB00074308 /* Assets.xcassets in Resources */,
-				56FBBCD425741E4100074308 /* one.musicxml in Resources */,
 				56FBBCB325740BCA00074308 /* Main.storyboard in Resources */,
+				56FBBD0E2574408B00074308 /* FaurReveSample.musicxml in Resources */,
 				56FBBCCD257414BD00074308 /* OSMD in Resources */,
-				56FBBCD025741BD400074308 /* Unlullaby.musicxml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
