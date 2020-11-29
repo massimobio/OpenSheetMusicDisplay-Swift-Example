@@ -10,9 +10,11 @@ import WebKit
 
 class NotationView: WKWebView, WKNavigationDelegate {
     
+    var zoom = 1.0
+    
     init(containerView: UIView) {
         super.init(frame: CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height), configuration: WKWebViewConfiguration())
-        containerView.backgroundColor = .clear
+        containerView.backgroundColor = .white
         isOpaque = false
         backgroundColor = .clear
         scrollView.backgroundColor = .clear
@@ -57,11 +59,19 @@ class NotationView: WKWebView, WKNavigationDelegate {
             .then(
               function() {
                 openSheetMusicDisplay.render();
-                openSheetMusicDisplay.zoom = 1.5;
+                openSheetMusicDisplay.zoom = \(zoom);
               }
             );
 
         """) { (reply, error) in
+            print("JavaScript evaluation completed")
+            print(reply ?? "No reply")
+            print(error ?? "No error")
+        }
+    }
+    
+    func updateZoomLevel() {
+        evaluateJavaScript("openSheetMusicDisplay.zoom = \(zoom);openSheetMusicDisplay.render();") { (reply, error) in
             print("JavaScript evaluation completed")
             print(reply ?? "No reply")
             print(error ?? "No error")
