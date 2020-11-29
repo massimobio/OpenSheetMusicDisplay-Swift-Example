@@ -8,24 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet private var containerView: UIView!
     private var notationView: NotationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notationView = NotationView(containerView: containerView)
-        
-        let zoomAction = UIAction(handler: { [self] _ in
-            notationView?.changeZoomLevel()
-        })
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Zoom", image: nil, primaryAction: zoomAction, menu: nil)
-        
-        let cursorNextAction = UIAction(handler: { [self] _ in
-            notationView?.cursorNext()
-        })
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cursor", image: nil, primaryAction: cursorNextAction, menu: nil)
-
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Zoom", style: .plain, target: notationView, action: #selector(NotationView.changeZoomLevel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cursor", style: .plain, target: notationView, action: #selector(NotationView.cursorNext))
     }
     
 }

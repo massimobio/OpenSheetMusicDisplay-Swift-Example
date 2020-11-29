@@ -37,7 +37,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
     }
     
     // MARK: WKNavigationDelegate functions
-
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Did finish navigation")
         let xmlURL = URL(fileURLWithPath: Bundle.main.path(forResource: "FaurReveSample", ofType: "musicxml")!)
@@ -64,32 +64,32 @@ class NotationView: WKWebView, WKNavigationDelegate {
               }
             );
 
-        """) { (reply, error) in
-            print("JavaScript Initial load evaluation completed")
-            print(reply ?? "No reply")
-            print(error ?? "No error")
+        """) { reply, error in
+                print("JavaScript Initial load evaluation completed")
+                print(reply ?? "No reply")
+                print(error ?? "No error")
         }
     }
     
-    func changeZoomLevel() {
+    @objc func changeZoomLevel() {
         zoom += 0.5
         if zoom > 2.1 {
             zoom = 1.0
         }
-
-        evaluateJavaScript("osmd.zoom = \(zoom);osmd.render();") { (reply, error) in
+        
+        evaluateJavaScript("osmd.zoom = \(zoom);osmd.render();") { reply, error in
             print("JavaScript updateZoomLevel evaluation completed")
             print(reply ?? "No reply")
             print(error ?? "No error")
         }
     }
     
-    func cursorNext() {
-        evaluateJavaScript("osmd.cursor.next();") { (reply, error) in
+    @objc func cursorNext() {
+        evaluateJavaScript("osmd.cursor.next();") { reply, error in
             print("JavaScript cursorNext evaluation completed")
             print(reply ?? "No reply")
             print(error ?? "No error")
         }
     }
-
+    
 }

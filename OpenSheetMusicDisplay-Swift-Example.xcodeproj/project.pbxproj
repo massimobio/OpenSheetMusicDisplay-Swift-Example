@@ -30,6 +30,7 @@
 		56FBBCC825740FCA00074308 /* OSMD */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OSMD; sourceTree = "<group>"; };
 		56FBBCC92574105B00074308 /* NotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotationView.swift; sourceTree = "<group>"; };
 		56FBBD0D2574408B00074308 /* FaurReveSample.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FaurReveSample.musicxml; sourceTree = "<group>"; };
+		56FBBD112574561400074308 /* OpenSheetMusicDisplay-Swift-Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OpenSheetMusicDisplay-Swift-Example.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		56FBBCAA25740BCA00074308 /* OpenSheetMusicDisplay-Swift-Example */ = {
 			isa = PBXGroup;
 			children = (
+				56FBBD112574561400074308 /* OpenSheetMusicDisplay-Swift-Example.entitlements */,
 				56FBBCAB25740BCA00074308 /* AppDelegate.swift */,
 				56FBBCAD25740BCA00074308 /* SceneDelegate.swift */,
 				56FBBCAF25740BCA00074308 /* ViewController.swift */,
@@ -298,15 +300,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OpenSheetMusicDisplay-Swift-Example/OpenSheetMusicDisplay-Swift-Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYKHTZHLF3;
 				INFOPLIST_FILE = "OpenSheetMusicDisplay-Swift-Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.technimo.OpenSheetMusicDisplay-Swift-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,15 +323,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OpenSheetMusicDisplay-Swift-Example/OpenSheetMusicDisplay-Swift-Example.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYKHTZHLF3;
 				INFOPLIST_FILE = "OpenSheetMusicDisplay-Swift-Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.technimo.OpenSheetMusicDisplay-Swift-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
