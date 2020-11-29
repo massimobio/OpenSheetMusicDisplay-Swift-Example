@@ -48,31 +48,44 @@ class NotationView: WKWebView, WKNavigationDelegate {
         xmlString = xmlString.replacingOccurrences(of: "'", with: "\\'").replacingOccurrences(of: "\n", with: "")
         evaluateJavaScript("""
           console.log("Attempt loading of MusicXML file");
-          var openSheetMusicDisplay = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmdContainer");
-          openSheetMusicDisplay.setOptions({
+          var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmdContainer");
+          osmd.setOptions({
             backend: "svg",
             drawTitle: true,
             // drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
           });
-          openSheetMusicDisplay
+          osmd
             .load('\(xmlString)')
             .then(
               function() {
-                openSheetMusicDisplay.render();
-                openSheetMusicDisplay.zoom = \(zoom);
+                osmd.render();
+                osmd.cursor.show();
               }
             );
 
         """) { (reply, error) in
-            print("JavaScript evaluation completed")
+            print("JavaScript Initial load evaluation completed")
             print(reply ?? "No reply")
             print(error ?? "No error")
         }
     }
     
-    func updateZoomLevel() {
-        evaluateJavaScript("openSheetMusicDisplay.zoom = \(zoom);openSheetMusicDisplay.render();") { (reply, error) in
-            print("JavaScript evaluation completed")
+    func changeZoomLevel() {
+        zoom += 0.5
+        if zoom > 2.1 {
+            zoom = 1.0
+        }
+
+        evaluateJavaScript("osmd.zoom = \(zoom);osmd.render();") { (reply, error) in
+            print("JavaScript updateZoomLevel evaluation completed")
+            print(reply ?? "No reply")
+            print(error ?? "No error")
+        }
+    }
+    
+    func cursorNext() {
+        evaluateJavaScript("osmd.cursor.next();") { (reply, error) in
+            print("JavaScript cursorNext evaluation completed")
             print(reply ?? "No reply")
             print(error ?? "No error")
         }

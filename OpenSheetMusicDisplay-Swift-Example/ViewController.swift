@@ -16,15 +16,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         notationView = NotationView(containerView: containerView)
         
-        let action = UIAction(handler: { [self] _ in
-            guard let notation = notationView else { return }
-            notation.zoom += 0.5
-            if notationView.zoom > 2.1 {
-                notation.zoom = 1.0
-            }
-            notation.updateZoomLevel()
+        let zoomAction = UIAction(handler: { [self] _ in
+            notationView?.changeZoomLevel()
         })
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Zoom", image: nil, primaryAction: action, menu: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Zoom", image: nil, primaryAction: zoomAction, menu: nil)
+        
+        let cursorNextAction = UIAction(handler: { [self] _ in
+            notationView?.cursorNext()
+        })
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Next", image: nil, primaryAction: cursorNextAction, menu: nil)
+
     }
     
 }
