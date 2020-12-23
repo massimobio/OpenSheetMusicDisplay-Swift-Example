@@ -47,23 +47,16 @@ class NotationView: WKWebView, WKNavigationDelegate {
         }
         xmlString = xmlString.replacingOccurrences(of: "'", with: "\\'").replacingOccurrences(of: "\n", with: "")
         evaluateJavaScript("""
-          console.log("Attempt loading of MusicXML file");
-          var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmdContainer");
-          osmd.setOptions({
-            backend: "svg",
-            drawTitle: true,
-            followCursor: true,
-            // drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
-          });
-          osmd
-            .load('\(xmlString)')
-            .then(
-              function() {
-                osmd.render();
-                osmd.cursor.show();
-              }
-            );
-
+        console.log("Attempt loading of MusicXML file");
+        var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmdContainer");
+        osmd.setOptions({
+          backend: "svg", drawTitle: true, followCursor: true,
+          // drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
+        });
+        osmd.load('\(xmlString)').then(function () {
+          osmd.render();
+          osmd.cursor.show();
+        });
         """) { reply, error in
                 print("JavaScript Initial load evaluation completed")
                 print(reply ?? "No reply")
