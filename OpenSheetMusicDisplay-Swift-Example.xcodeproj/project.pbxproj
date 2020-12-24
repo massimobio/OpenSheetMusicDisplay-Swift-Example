@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563A572C2594063E0032C000 /* The Beginning.musicxml in Resources */ = {isa = PBXBuildFile; fileRef = 563A572B2594063E0032C000 /* The Beginning.musicxml */; };
 		56FBBCAC25740BCA00074308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBBCAB25740BCA00074308 /* AppDelegate.swift */; };
 		56FBBCAE25740BCA00074308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBBCAD25740BCA00074308 /* SceneDelegate.swift */; };
 		56FBBCB025740BCA00074308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBBCAF25740BCA00074308 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		563A572B2594063E0032C000 /* The Beginning.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "The Beginning.musicxml"; sourceTree = "<group>"; };
 		56FBBCA825740BCA00074308 /* OpenSheetMusicDisplay-Swift-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenSheetMusicDisplay-Swift-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FBBCAB25740BCA00074308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56FBBCAD25740BCA00074308 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				56FBBCB125740BCA00074308 /* Main.storyboard */,
 				56FBBCB425740BCB00074308 /* Assets.xcassets */,
 				56FBBD0D2574408B00074308 /* FaurReveSample.musicxml */,
+				563A572B2594063E0032C000 /* The Beginning.musicxml */,
 				56FBBCB625740BCB00074308 /* LaunchScreen.storyboard */,
 				56FBBCB925740BCB00074308 /* Info.plist */,
 				56FBBCC825740FCA00074308 /* OSMD */,
@@ -139,6 +142,7 @@
 				56FBBCB525740BCB00074308 /* Assets.xcassets in Resources */,
 				56FBBCB325740BCA00074308 /* Main.storyboard in Resources */,
 				56FBBD0E2574408B00074308 /* FaurReveSample.musicxml in Resources */,
+				563A572C2594063E0032C000 /* The Beginning.musicxml in Resources */,
 				56FBBCCD257414BD00074308 /* OSMD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
