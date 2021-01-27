@@ -64,9 +64,22 @@ class NotationView: WKWebView, WKNavigationDelegate {
         }
     }
     
-    @objc func changeZoomLevel() {
-        zoom += 0.5
+    @objc func changeZoomLevelPlus() {
+        zoom += 0.25
         if zoom > 2.1 {
+            zoom = 2.0
+        }
+        
+        evaluateJavaScript("osmd.zoom = \(zoom);osmd.render();") { reply, error in
+            print("JavaScript updateZoomLevel evaluation completed")
+            print(reply ?? "No reply")
+            print(error ?? "No error")
+        }
+    }
+    
+    @objc func changeZoomLevelMinus() {
+        zoom -= 0.25
+        if zoom < 1.0 {
             zoom = 1.0
         }
         
