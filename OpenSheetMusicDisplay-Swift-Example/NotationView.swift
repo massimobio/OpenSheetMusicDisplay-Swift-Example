@@ -10,7 +10,9 @@ import WebKit
 
 class NotationView: WKWebView, WKNavigationDelegate {
     
-    var zoom = 1.0
+    private var zoom = 1.0
+    private let scores = ["FaurReveSample", "The Beginning"]
+    private var selectedScore = 0
     
     init(containerView: UIView) {
         super.init(frame: CGRect(x: 0, y: 0, width: containerView.frame.width, height: containerView.frame.height), configuration: WKWebViewConfiguration())
@@ -40,7 +42,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("Did finish navigation")
-        let xmlURL = URL(fileURLWithPath: Bundle.main.path(forResource: "FaurReveSample", ofType: "musicxml")!)
+        let xmlURL = URL(fileURLWithPath: Bundle.main.path(forResource: scores[selectedScore], ofType: "musicxml")!)
         guard var xmlString = try? String(contentsOf: xmlURL) else {
             print("Couldn't read the MusicXML file")
             return
@@ -96,6 +98,14 @@ class NotationView: WKWebView, WKNavigationDelegate {
             print(reply ?? "No reply")
             print(error ?? "No error")
         }
+    }
+    
+    @objc func switchScore() {
+        selectedScore += 1
+        if selectedScore >= scores.count {
+            selectedScore = 0
+        }
+        reload()
     }
     
 }
