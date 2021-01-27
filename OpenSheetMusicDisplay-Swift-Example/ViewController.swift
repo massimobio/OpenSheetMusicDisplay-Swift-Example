@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         let zoomIn = UIBarButtonItem(image: UIImage(systemName: "plus.magnifyingglass"), style: .plain, target: notationView, action: #selector(NotationView.changeZoomLevelPlus))
         let zoomOut = UIBarButtonItem(image: UIImage(systemName: "minus.magnifyingglass"), style: .plain, target: notationView, action: #selector(NotationView.changeZoomLevelMinus))
         navigationItem.rightBarButtonItems = [zoomIn, zoomOut]
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cursor", style: .plain, target: notationView, action: #selector(NotationView.cursorNext))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.forward.square"), style: .plain, target: notationView, action: #selector(NotationView.cursorNext))
     }
     
 }
