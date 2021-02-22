@@ -58,6 +58,7 @@ class NotationView: WKWebView, WKNavigationDelegate {
         osmd.load('\(xmlString)').then(function () {
           osmd.render();
           osmd.cursor.show();
+          osmd.rules.DefaultColorCursor = "#2FDAE0"; // light blue. use HTML hex colors
         });
         """) { reply, error in
                 print("JavaScript Initial load evaluation completed")
